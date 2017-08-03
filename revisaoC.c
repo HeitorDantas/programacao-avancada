@@ -1,12 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int global;
+void delay(int time){
+    for(int i=0;i<100000*time;i++);
+}
+
+void imprimeDelay(char *str,int time){
+	for(int i=0;*(str+i)!=0;i++){
+        putchar(*(str+i));
+        delay(time);
+    }
+
+}
 
 
 
 int main(int argc,char *argv[]){
-    char hello[]="HELLO WORLD \0";
+    char hello[]="HELLO WORLD ";
     char str[100],nome[50];
     FILE *nomes;
     nomes = fopen("nomes.txt","r");
@@ -14,25 +24,16 @@ int main(int argc,char *argv[]){
         printf("erro\n");
         return 1;
     }
-    strcpy(str,hello);
-
-    fgets(nome , 50 , nomes);
-      // puts(nome);
-   // printf("%s",str);
-    for(int c=0;str[c]!=0;c++){
-        fgets(nome , 50 , nomes);
-       // strcat(str,nome)
-        for(int i=0;i<100000000;i++);
-        putchar(str[c]);
-        if(str[c+1]==0) {c=-1;
-            puts(nome);
-        }
+    for(int i=0;i<100;i++){
+        fgets(nome,50,nomes);
+        strcpy(str,hello);
+        strcat(str,nome);
+        imprimeDelay(str,100);
     }
 
-    int x = 30;
 
-    printf("%d\n",x);
 
     fclose(nomes);
     return 0;
 }
+
