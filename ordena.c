@@ -30,16 +30,7 @@ void bubble(int v[],int n){
   }//end out-for
 }
 //12 14 3 9 7
-/*  12 3 14 9 7
-    12 3 9 14 7
-    12 3 9 7 14 j = 4 ,i = 0
-  12 3 9 7 14
-    3 12 9 7 14
-    3 9 12 7 14
-    3 9 7 12 14
-  3 9 7 12 14
-    3 7 9 12 14
-*/
+
 void imprimeV(int v[],int n){
   printf("[");
   for(int i = 0;i<n;i++){
