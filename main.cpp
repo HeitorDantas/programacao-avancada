@@ -1,46 +1,55 @@
 #include <stdio.h>
+#include <stdlib.h>
+//casa - guardar um array de 8 posicoes ,com 0s ou 1s
+//contido nele, para um uchar,e o inverso
 
-void swap(int *x,int *y){
-    /*Troca o valor de duas variaveis*/
-    int aux;
-    aux = *y;
+void printchar(unsigned char x){
+    for(unsigned char c=0;c<8;c++){
+        printf("%d", !!(x & 0x80));
+        x = x << 1;
+    }
 
-    *y = *x;
-    *x = aux;
-}
-void ordena(int *a,int *b,int *c){
-    if(a<b)
-        swap(&a,&b);
-    if(b<c)
-        swap(&b,&c);
-    if(a<b)
-        swap(&a,&b);
 
 }
+
+void printbin(int x){
+    unsigned char *pu,aux=1;
+
+    pu = (unsigned char *)&x;
+    for(int c=0;c<8;c++){
+        printf("%d",)
+    }
+
+}
+
+void printint(int x){
+    unsigned char *pu;
+
+    pu = (unsigned char *)&x;
+    printf("%d\n",x);
+    for(int i=0;i<4;i++){
+        printf("byte %d: %3d --",i,*pu);
+        printchar(*pu);
+        printf("\n");
+        pu++;
+    }
+
+}
+
+
+
 
 int main(){
-    int a,b,c;
-    a=3;b=4;c=2;
+    //unsigned char* pu;
+    int x;
 
-    ordena(&a,&b,&c);
+    //x = rand();
+    x = 204;
 
-    printf("%d, %d, %d\n",a,b,c);
-
-
+    printint(x);
+    x = 256;
+    printint(x);
 
 
     return 0;
 }
-
-
-
-
-//%%%%%%%% - notes - %%%%%%%%
-//http://www.devfuria.com.br/#categorias
-/*  int x;int *px;
-   &x : endereco de x
-   *px : conteudo de px
-
-
-
-*/
