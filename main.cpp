@@ -1,55 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-//casa - guardar um array de 8 posicoes ,com 0s ou 1s
-//contido nele, para um uchar,e o inverso
+#include <string.h>
+#include <malloc.h>
 
-void printchar(unsigned char x){
-    for(unsigned char c=0;c<8;c++){
-        printf("%d", !!(x & 0x80));
-        x = x << 1;
+char *sobrenome(char *nome){
+    char *sobre=nome;
+    while(*sobre != ' '){
+        sobre++;
     }
-
-
-}
-
-void printbin(int x){
-    unsigned char *pu,aux=1;
-
-    pu = (unsigned char *)&x;
-    for(int c=0;c<8;c++){
-        printf("%d",)
+    while(*sobre == ' '){
+        sobre++;
     }
-
+    return sobre;
 }
-
-void printint(int x){
-    unsigned char *pu;
-
-    pu = (unsigned char *)&x;
-    printf("%d\n",x);
-    for(int i=0;i<4;i++){
-        printf("byte %d: %3d --",i,*pu);
-        printchar(*pu);
-        printf("\n");
-        pu++;
-    }
-
-}
-
-
 
 
 int main(){
-    //unsigned char* pu;
-    int x;
 
-    //x = rand();
-    x = 204;
+    char nome[80];
+    char *p;
+    p =(char*) malloc(40*sizeof(char));
 
-    printint(x);
-    x = 256;
-    printint(x);
+    puts("digite seu nome e sobrenome:");
+    gets(nome);
+    puts(nome);
+    p = sobrenome(nome);
+    puts(p);
 
-
+    printf("memoria alocada em p: %d\n",_msize(p)/sizeof(char));
     return 0;
 }
