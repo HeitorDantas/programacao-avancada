@@ -1,46 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <malloc.h>
 
-void swap(int *x,int *y){
-    /*Troca o valor de duas variaveis*/
-    int aux;
-    aux = *y;
-
-    *y = *x;
-    *x = aux;
+char *sobrenome(char *nome){
+    char *sobre=nome;
+    while(*sobre != ' '){
+        sobre++;
+    }
+    while(*sobre == ' '){
+        sobre++;
+    }
+    return sobre;
 }
-void ordena(int *a,int *b,int *c){
-    if(a<b)
-        swap(&a,&b);
-    if(b<c)
-        swap(&b,&c);
-    if(a<b)
-        swap(&a,&b);
 
-}
 
 int main(){
-    int a,b,c;
-    a=3;b=4;c=2;
 
-    ordena(&a,&b,&c);
+    char nome[80];
+    char *p;
+    p =(char*) malloc(40*sizeof(char));
 
-    printf("%d, %d, %d\n",a,b,c);
+    puts("digite seu nome e sobrenome:");
+    gets(nome);
+    puts(nome);
+    p = sobrenome(nome);
+    puts(p);
 
-
-
-
+    printf("memoria alocada em p: %d\n",_msize(p)/sizeof(char));
     return 0;
 }
-
-
-
-
-//%%%%%%%% - notes - %%%%%%%%
-//http://www.devfuria.com.br/#categorias
-/*  int x;int *px;
-   &x : endereco de x
-   *px : conteudo de px
-
-
-
-*/
