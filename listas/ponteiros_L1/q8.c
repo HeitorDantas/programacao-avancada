@@ -1,9 +1,9 @@
 /*
 
-  p = mat + 1;
+  p = mat + 1;  valida
 p = mat++;
 p = ++mat;
-x = (*mat)++; unica atribuiçao valida
+x = (*mat)++;   valida, incremento no conteudo do primeiro elemento do array
 
 
 */
