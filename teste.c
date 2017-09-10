@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 void delay(){
     for(int i=0;i<1000000000;i++);
 }
