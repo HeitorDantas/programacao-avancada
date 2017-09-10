@@ -1,0 +1,514 @@
+Aluno: HEITOR CARLOS DE MEDEIROS DANTAS
+
+=================================== Questao 1 ======================================
+
+=================================== Questao 2 ======================================
+
+#include <stdio.h>
+
+int main(){
+	int i=3,j=5;
+	int *p, *q;//dois ponteiros pra inteiro
+	p = &i;
+	q = &j;	
+
+
+	/*determinar o valor :
+	1)  p == &i
+	 		p aponta para i entao ele guarda o endereco de i
+			e &i é o valor do endereco de i, entao o valor
+			da expressao é 1 ou true
+	*/
+	printf("p == &i : %d\n\n",p == &i);//confirmacao			
+	/*
+	2)	*p - *q
+			*p quer dizer: o conteudo do endereço para qual
+			p esta apontando, o mesmo pra *q.
+			 Entao *p - *q == i - j	== 3 - 5 == -2
+	*/
+	printf("*p - *q : %d\n\n",*p - *q);//confirmacao	 
+	/*
+	3)	**&p 
+			&p representa o endereco onde esta armazenado a variavel ponteiro p
+			se eu uso *&p estou acessando o conteudo do endereco de p(que seria o endereco de i),
+			entao **&p é o conteudo do endereço *&p, entao **&p == i == 3;
+	*/
+	printf("**&p : %d\n\n",**&p);//confirmacao
+	/*
+	4) 	3 - *p/(*q) + 7;
+			*p == i == 3 e *q == j == 5
+			3 - 3/5 + 7 = 3 - 0 + 7 = 10
+	*/
+	printf("3 - *p/(*q) + 7 : %d\n",3 - *p/(*q) + 7);//confirmacao
+}
+
+=================================== Questao 3 ======================================
+
+/*
+
+}
+
+int i=5, *p;
+
+p = &i;//p guarda o endereco de i
+
+printf("%x %d %d %d %d", p,*p+2,**&p,3**p,**&p+4);
+p : endereco de i = 4094
+*p+2 : i+2 == 7
+**&p == i == 5
+3**p : *p == i , 3*i == 15
+**&p+4 : i+4 == 9
+
+out: 4094 7 5 15 9
+
+}
+*/
+
+=================================== Questao 4 ======================================
+/*
+int i,j;
+
+p = i; invalida, p nao pode guardar o valor i, mas sim o endereco.
+q = &j;
+p = &*&i;
+i = (*&)j; invalida,a expressao dentro do parentesis nao se aplica a nenhuma variavel
+i = *&j;
+i = *&*&j;
+q = *p; invalido, q nao pode receber o valor pra qual p aponta a menos que esse seja um endereco
+i = (*p)++ + *q;
+
+*/
+
+=================================== Questao 5 ======================================
+#include <stdio.h>
+
+int main() {
+  int    valor;
+  int   *p1;
+  float  temp;
+  float *p2;
+  char   aux;
+  char *nome = "Ponteiros";
+  char  *p3;
+  int    idade;
+  int    vetor[3];
+  int   *p4;
+  int   *p5;
+
+  /* (a) */
+  valor = 10;
+  p1 = &valor;
+  *p1 = 20;
+  printf("%d \n", valor);//valor esperado == 20
+
+  /* (b) */
+  temp = 26.5;
+  p2 = &temp;
+  *p2 = 29.0;
+  printf("%.1f \n", temp);//valor esperado == 29.0
+
+   /* (c) */
+  p3 = &nome[0];
+  aux = *p3;
+  printf("%c \n", aux); //valor esperado == 'P'
+
+  /* (d) */
+  p3 = &nome[4];
+  aux = *p3;
+  printf("%c \n", aux);//valor esperado == 'e'
+
+  /* (e) */
+  p3 = nome;
+  printf("%c \n", *p3);//valor esperado == 'P'
+
+  /* (f) */
+  p3 = p3 + 4;
+  printf("%c \n", *p3);//valor esperado == 'e'
+
+  /* (g) */
+  p3--;
+  printf("%c \n", *p3);//valor esperado == 't'
+
+  /* (h) */
+  vetor[0] = 31;
+  vetor[1] = 45;
+  vetor[2] = 27;
+  p4 = vetor;
+  idade = *p4;
+  printf("%d \n", idade);//valor esperado == 31
+
+  /* (i) */
+  p5 = p4 + 1;
+  idade = *p5;
+  printf("%d \n", idade);//valor esperado == 45
+
+  /* (j) */
+  p4 = p5 + 1;
+  idade = *p4;
+  printf("%d \n", idade);//valor esperado == 27
+
+  /* (l) */
+  p4 = p4 - 2;
+  idade = *p4;
+  printf("%d \n", idade);//valor esperado == 31
+
+  /* (m) */
+  p5 = &vetor[2] - 1;
+  printf("%d \n", *p5);//valor esperado == 45
+
+  /* (n) */
+  p5++;
+  printf("%d \n", *p5);//valor esperado == 27
+
+	//ok
+  return(0);
+}
+
+
+=================================== Questao 6 ======================================
+#include <stdio.h>
+
+int main(void){
+  float vet[5] = {1.1,2.2,3.3,4.4,5.5};
+  float *f;
+  int i;
+  f = vet;
+  printf("contador/valor/valor/endereco/endereco");
+  for(i = 0 ; i <= 4 ; i++){
+    printf("\ni = %d",i);
+    printf("vet[%d] = %.1f",i, vet[i]);
+    printf("*(f + %d) = %.1f",i, *(f+i));
+    printf("&vet[%d] = %p",i, &vet[i]);
+    printf("(f + %d) = %p",i, f+i);
+  }
+}
+
+
+=================================== Questao 7 ======================================
+
+=================================== Questao 8 ======================================
+
+=================================== Questao 9 ======================================
+
+=================================== Questao 10 ======================================
+//TIPO x[4]; 
+//x = 4092
+
+//char x[4];
+//x+1 = 4093 
+//x+2 = 4094
+//x+3 = 4095
+
+//int x[4];
+//x+1 = 4094
+//x+2 = 4096
+//x+3 = 4098
+
+//float x[4];
+//x+1 = 4096
+//x+2 = 4100
+//x+3 = 4104
+
+//double x[4];
+//x+1 = 4100
+//x+2 = 4108
+//x+3 = 4116
+
+
+=================================== Questao 11 ======================================
+#include <stdio.h>
+
+int main(){
+	char xc[4];
+	int xi[4];
+	double xd[4];
+	float xf[4];
+	printf("char:\n\tx+1 = %X\n\tx+2 = %X\n\tx+3 = %X\n",xc+1,xc+2,xc+3);
+	printf("int:\n\tx+1 = %X\n\tx+2 = %X\n\tx+3 = %X\n",xi+1,xi+2,xi+3);
+	printf("float:\n\tx+1 = %X\n\tx+2 = %X\n\tx+3 = %X\n",xf+1,xf+2,xf+3);
+	printf("double:\n\tx+1 = %d\n\tx+2 = %d\n\tx+3 = %d\n",xd+1,xd+2,xd+3);
+	return 0;
+}
+
+=================================== Questao 12 ======================================
+#include <stdio.h>
+
+int
+main(){
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+
+aloha[2] = value; //valido
+//scanf("%f", &aloha); //invalido &aloha é endereço do ponteiro
+//aloha = value; //invalido, o ponteiro de array é imutavel, nao pode atribuir
+//printf("%f", aloha);//invalido , aloha é um  ponteiro
+coisas[4][4] = aloha[3];//valido
+//coisas[5] = aloha;//acho que é valido,pois coisas[5] guarda um vetor de 5 posiçoes,ou seja um ponteiro 
+						//que aponta pra o começo da segunda dimensao do array
+						//teste: é invalido, atribuiçao para ponteiro para array
+
+//pf = value;//pf pode guardar um endereço, invalido
+pf = aloha;//valido
+
+	return 0;
+}
+
+=================================== Questao 13 ======================================
+/* uma funçao tem que ser armazenada na memoria, 
+	entao podemos usar um ponteiro que guarde o endereco dessa funcao
+	e assim podemos usar ela indiretamente.
+	Podemos agora passa um ponteiro pra funcao, como parametro para
+	outra funcao, ou usar a funçao chamando o ponteiro.
+	segue o code exemplo abaixo.
+		o programa deve 
+*/
+
+#include <stdio.h>
+
+int soma(int a,int b){
+	return a + b;
+}
+int sub(int a,int b){
+	return a - b;
+}
+
+int mult(int a,int b){
+	return a * b;
+}
+
+int div(int a,int b){
+	return a / b;
+}
+
+int opera(int a,int b,int (*pfunc)(int x,int y)){
+	return pfunc(a,b);
+}
+
+int main(){
+	int a,b,ans;
+	char op;
+	
+	printf("\n\n\t\t/ * - + ==CALCULADORA SIMPLES== + - * / \n\n");
+	printf("USO: X 'OPERADOR' Y  - ex. 5 / 4\n\n");
+	
+	printf("\n-> ");	
+	scanf("%d %c %d",&a,&op,&b);
+		switch(op){
+			case '+':
+				printf("\n%d + %d = %d\n",a,b,opera(a,b,soma));
+				break;
+			case '-':
+				printf("\n%d - %d = %d\n",a,b,opera(a,b,sub));
+				break;
+			case '*':
+				printf("\n%d * %d = %d\n",a,b,opera(a,b,mult));
+				break;
+			case '/':
+				printf("\n%d / %d = %d\n",a,b,opera(a,b,div));
+				break;
+
+			default:
+				printf("operaçao invalida\n");
+				break;
+		}
+	
+	return 0;
+}
+
+=================================== Questao 14 ======================================
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(float *x,float *y){
+    /*Troca o valor de duas variaveis*/
+    float aux;
+    aux = *y;
+
+    *y = *x;
+    *x = aux;
+}
+
+void bubble(float v[],float n){
+  int i,j;
+  for(i = 0;i<n-1;i++){
+    for(j = 0;j<n-1;j++){
+      if(v[j]>v[j+1])
+        swap(&v[j],&v[j+1]);
+    }//end in-for
+  }//end out-for
+}
+
+int main(){
+	float x,*pf;
+	int n;
+	printf("quantos numeros deseja escrever > ");
+	scanf("%d",&n);
+  pf = malloc(n * sizeof(float));
+	
+  //ler os n valores 
+  for(int i=0;i<n;i++) scanf("%f",(pf+i));//ou &pf[i]
+  for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+  printf("\n");
+  bubble(pf,n);
+  for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+  printf("\n");
+  free(pf);
+	return 0;
+}
+
+=================================== Questao 15 ======================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+/*
+	a funcao qsort tem prototipo 
+	void qsort (void* base, size_t num, size_t size,int (*compar)(const void*,const void*));
+- o primeiro argumento é o ponteiro que aponta pra o primeiro elemento do array ou do bloco alocado
+- o segundo é o numero de elementos a ordenar, 
+- o terceiro é o tamanho em byte referente ao tipo de dado a ser ordenado
+- o quarto eh um ponteiro para um funcao que compara dois elementos genericos, a funcao compare.
+*/
+
+
+int compare (const void * a, const void * b){
+	/* essa funcao compara dois elementos */
+  if ( *(float*)a <  *(float*)b ) return -1;
+  if ( *(float*)a == *(float*)b ) return 0;
+  if ( *(float*)a >  *(float*)b ) return 1;
+}
+
+int main(){
+	float *pf;//ponteiro para alocar a memoria
+	int n;//numero de elementos
+	
+
+
+	printf("quantos numeros deseja escrever > ");
+	scanf("%d",&n);//lendo a quantidade de elementos que usuario vai digitar
+	pf = malloc(n * sizeof(float));//alocando memoria para os n elementos
+	
+	//ler os n valores 
+	for(int i=0;i<n;i++) scanf("%f",(pf+i));
+	
+	//printa valores antes de ordenar
+	for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+	printf("\n");
+	
+	//ordenar
+	qsort((void*)pf,n,sizeof(float),compare);
+	
+	for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+	printf("\n");
+	free(pf);
+	return 0;
+}
+
+=================================== Questao 16 ======================================
+
+=================================== Questao 17 ======================================
+
+=================================== Questao 18 ======================================
+
+=================================== Questao 19 ======================================
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int **matrix_alloc(int **M,int nlin,int ncol){
+	/*Aloca memoria para um array bi-dimensional*/
+	M = (int**)malloc(nlin*sizeof(int*));
+	M[0] = (int*)malloc(nlin*ncol*sizeof(int));
+	for(int i=1;i<nlin;i++){
+		M[i] = M[i-1]+ncol;
+	}
+	return M;
+}
+int free_matrix(int **M){
+	/*libera memoria alocada para array bi-dimensional*/
+	free(*M);
+	free(M);
+}
+void fill_matrix(int **M,int nlin,int ncol){
+	/*ler valores do usuario e guarda no array*/
+	for(int i=0;i<nlin;i++){
+		for (int j = 0; j<ncol;j++){
+			scanf("%d",&M[i][j]);
+		}
+	}
+}
+void print_matrix(int **M,int nlin,int ncol){
+	/*imprime o array*/
+	for(int i=0;i<nlin;i++){
+		for (int j = 0; j<ncol;j++){
+			printf("%2d ",M[i][j]);
+		}
+		printf("\n");
+	}
+}
+int **mult_matrix(int **A,int **B,int **C,int nlin_A,int ncol_A,int ncol_B){
+	/*Algoritmo de multiplicacao de matrizes*/
+	int termo = 0;
+	for(int i=0;i<nlin_A;i++){
+		for(int j=0;j<ncol_B;j++){
+			for(int k=0;k<ncol_A;k++){
+				termo += A[i][k]*B[k][j];
+			}
+			C[i][j] = termo;
+			termo = 0;
+		}
+	}
+	return C;
+}
+
+int main(int argc,char *argv[]){
+	int **A,**B,**C;
+	int nlin_A,ncol_A;
+	int nlin_B,ncol_B;
+
+	printf("dimensoes da matriz A(nlin ncol): ");
+	scanf("%d %d",&nlin_A,&ncol_A);
+	
+	printf("dimensoes da matriz B(nlin ncol): ");
+	scanf("%d %d",&nlin_B,&ncol_B);
+	
+	//alocando espaco para as matrizes=================
+
+	A = matrix_alloc(A,nlin_A,ncol_A);
+	B = matrix_alloc(B,nlin_B,ncol_B);
+	C = matrix_alloc(C,nlin_A,ncol_B);
+	
+	//===ler os valores para as matrizes A e B===========
+
+	printf("entre com a matrix A:\n");
+	fill_matrix(A,nlin_A,ncol_A);
+	
+	printf("entre com a matrix B:\n");
+	fill_matrix(B,nlin_B,ncol_B);
+	system("cls");
+
+	//===================================================
+	
+	printf("print A:\n");
+	print_matrix(A,nlin_A,ncol_A);
+	
+	printf("print B:\n");
+	print_matrix(B,nlin_B,ncol_B);
+
+	//executando o produto de A*B=====================================
+	
+	C = mult_matrix(A,B,C,nlin_A,ncol_A,ncol_B);
+	printf("print C:\n");
+	print_matrix(C,nlin_A,ncol_B);
+	
+	//liberando as memorias alocadas
+
+	free_matrix(A);
+	free_matrix(B);
+	free_matrix(C);
+	return 0;
+}
+
+=================================== Questao 20 ======================================
+
+=================================== Questao 21 ======================================
