@@ -1,4 +1,3 @@
-//questao 1 - lista ponteiros
 
 #include <stdio.h>
 

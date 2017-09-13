@@ -1,4 +1,5 @@
-#include <stdio>
+#include <stdio.h>
+#include <stdlib.h>
 
 void swap(float *x,float *y){
     /*Troca o valor de duas variaveis*/
@@ -24,8 +25,15 @@ int main(){
 	int n;
 	printf("quantos numeros deseja escrever > ");
 	scanf("%d",&n);
-	pf = 
-
-
+  pf = malloc(n * sizeof(float));
+	
+  //ler os n valores 
+  for(int i=0;i<n;i++) scanf("%f",(pf+i));//ou &pf[i]
+  for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+  printf("\n");
+  bubble(pf,n);
+  for(int i=0;i<n;i++) printf("%.2f ",pf[i]);
+  printf("\n");
+  free(pf);
 	return 0;
 }
