@@ -2,10 +2,20 @@
 #define MATRIZ_H
 
 
-class matriz
-{
+class Matriz{
+
+private:
+    float **x;// para guardar a matriz
+    int nl, nc;// numero de linhas e numero de colunas
+
 public:
-    matriz();
+
+    Matriz(int _nl=0, int _nc=0);
+    ~Matriz();
+    int getNC();
+    int getNL();
+    void print();
+    float &operator()(int i, int j);
 };
 
 #endif // MATRIZ_H
