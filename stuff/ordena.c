@@ -3,6 +3,7 @@
 #include <time.h>
 #define TAM 30
 
+
 void swap(int *x,int *y){
     /*Troca o valor de duas variaveis*/
     int aux;
@@ -39,7 +40,7 @@ void imprimeV(int v[],int n){
   }
   printf("\b\b]\n");
 }
-int verify(int v[],int n){
+int verify(int v[],int n){//verificar se estar ordenado
   for(int i=0;i<TAM-1;i++){
     if(v[i+1]< v[i]) return 0;
   }
@@ -60,6 +61,7 @@ int main(){
     printf("\n\n");
     imprimeV(v,TAM);
     //ordena(&a,&b,&c);
+    printf("teste de macro crescente %d\n",1 ORDEM(1) 0);
     printf("ordenado ? (s/n)(1/0) %d\n",verify(v,TAM));
     //printf("%d, %d, %d\n",a,b,c);
 

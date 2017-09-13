@@ -19,94 +19,58 @@ void bubble(float v[],int n,int (*compara)(void const*,void const*)){
   }
 }
 
-
-
 int main(){
   srand(time(NULL));
-<<<<<<< HEAD
   clock_t t;
-=======
-<<<<<<< HEAD
-=======
-  clock_t t;
->>>>>>> d0f6e3893bdea6b49b2821470f2999d12822df7e
->>>>>>> f07731d6dd922e1fdf6a4e0b0e7ab6b44edbe067
   float *v;
   int n,a;
+  printf("Digite qual o tamanho do array que deseja testar! ->");
   scanf("%d",&n);
   v = (float*)malloc(n*sizeof(int));
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> d0f6e3893bdea6b49b2821470f2999d12822df7e
->>>>>>> f07731d6dd922e1fdf6a4e0b0e7ab6b44edbe067
+  //preenchendo o array
   for (int i=0;i<n;i++) {
     a = rand()%50;
     v[i] = (float)a;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    //scanf("%f",&v[i]);
-  }
-  for (int i=0;i<n;i++) {
-    printf("%2.0f ",v[i]);
-  }
-  printf("\n");
-
-  bubble(v,n,compare);
-
-
-  for (int i=0;i<n;i++) {
-    printf("%2.0f ",v[i]);
-  }
-  printf("\n");
-=======
->>>>>>> f07731d6dd922e1fdf6a4e0b0e7ab6b44edbe067
   }
   // for (int i=0;i<n;i++) {
   //   printf("%2.0f ",v[i]);
   // }
- 
-  // printf("\n");
-   t = clock();
-  for(int i=0;i<1;i++){
-    for (int i=0;i<n;i++) {
-    a = rand()%50;
-    v[i] = (float)a;
 
-  }
+  // printf("\n");
+
+  //benchmark 1 -- bubble
+   t = clock();
+  for(int i=0;i<100;i++){
+    for (int i=0;i<n;i++){
+      a = rand()%20;
+      v[i] = (float)a;
+
+    }
     bubble(v,n,compare);
   }
   t = clock() - t;
   printf("tempo bubble:%f\n",(float)t/CLOCKS_PER_SEC);
+
+
   //bench 2
   t = clock();
-  for(int i=0;i<1;i++){
+  for(int i=0;i<100;i++){
     for (int i=0;i<n;i++) {
-    a = rand()%50;
-    v[i] = (float)a;
+      a = rand()%20;
+      v[i] = (float)a;
 
-  }
+    }
     qsort ((void*)v, n, sizeof(float),compare);
   }
   t = clock() - t;
   printf("tempo qsort:%f\n",(float)t/CLOCKS_PER_SEC);
+
   // for (int i=0;i<n;i++) {
   //   printf("%2.0f ",v[i]);
   // }
   // printf("\n");
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> d0f6e3893bdea6b49b2821470f2999d12822df7e
->>>>>>> f07731d6dd922e1fdf6a4e0b0e7ab6b44edbe067
-
   free(v);
 
   return 0;

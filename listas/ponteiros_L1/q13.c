@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* uma funçao tem que ser armazenada na memoria, 
 	entao podemos usar um ponteiro que guarde o endereco dessa funcao
 	e assim podemos usar ela indiretamente.
@@ -58,3 +59,31 @@ int main(){
 	
 	return 0;
 }
+=======
+#include <stdio.h>
+
+int soma(int a, int b){
+    return a+b;
+}
+
+
+
+
+int main(int argc, char const *argv[]) {
+  int (*pont)(int, int);
+  int a,b;
+  a = 3;b=4;
+  pont = soma;
+  printf("end soma = %p\n",&soma);
+  printf("end pont = %p\n",&pont);
+
+  printf("pont = %p\n",pont);
+
+
+
+
+  printf("soma = %d\n",soma(a,b));
+  printf("soma = %d\n",pont(a,b));
+  return 0;
+}
+>>>>>>> f07731d6dd922e1fdf6a4e0b0e7ab6b44edbe067
