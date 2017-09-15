@@ -4,7 +4,7 @@
 using namespace std;
 
 Matriz::Matriz(int _nl, int _nc) : ncol(_nc), nlin(_nl){
-    cout << "build'in" <<endl;
+    cout << "build" <<endl;
     x = nullptr;
 
     if(_nl <=0 || _nc <= 0){
