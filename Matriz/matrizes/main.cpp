@@ -13,9 +13,13 @@ int main(){
     cout << << endl;
     */
     m(1,2) = 4;
+
+
+    o = p = m;
+    m(0,0) = 5;
+    p(0,0) = 52;
+    o.print();
     m.print();
-
+    p.print();
     return 0;
-
-
 }
