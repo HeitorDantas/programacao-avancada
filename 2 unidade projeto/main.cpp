@@ -23,5 +23,8 @@ int main(){
 	ret.rotacionar(PI/6,CM);
 	ret.print();
 	cout << "Area:" <<ret.area() << endl;
+
+cout << "num de vertices ret:" <<ret.getNumVertices() << endl;
+
 	return 0;
 }

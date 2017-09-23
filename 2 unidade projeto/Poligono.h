@@ -9,7 +9,7 @@ protected:
 	Ponto *vertices;
 	int N;
 public:
-	Poligono(int N);
+	Poligono();
 	~Poligono();
 	void inserir(Ponto v);
 	int getNumVertices();

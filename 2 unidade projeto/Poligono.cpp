@@ -5,10 +5,11 @@
 using namespace std;
 
 
-Poligono::Poligono(int _N){
+Poligono::Poligono(){
 
-	N = _N;
-	this->vertices = new Ponto[N];
+	//aloca 100 ponto para podemos usar
+	N=0;
+	vertices = new Ponto[100];
 
 
 }
@@ -17,14 +18,8 @@ Poligono::~Poligono(){
 	delete[] vertices;
 }
 void Poligono::inserir(Ponto v){
-	//aloca o necessario para guarda o numero atual de vertices + 1 -not really
-	// Ponto *aux;
-	// aux = new Ponto[N+1];
-	// memcpy(aux,vertices,N*sizeof(Ponto));
-	static int i=0;
-	if(i>=N) return;
 
-	vertices[i++] = v;
+	vertices[N++] = v;
 
 }
 int Poligono::getNumVertices(){

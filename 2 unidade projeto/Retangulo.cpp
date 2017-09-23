@@ -3,7 +3,7 @@
 
 
 
-Retangulo::Retangulo(float x, float y, float largura, float altura) : Poligono(4){
+Retangulo::Retangulo(float x, float y, float largura, float altura){
 	Ponto aux;
 	this->altura = altura;
 	this->largura = largura;
