@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1506521903 source:c:\users\user34\documents\2u\main.cpp
+	<iostream>
+	"screen.h"
+
+1506522021 c:\users\user34\documents\2u\include\screen.h
+	<iostream>
+	<vector>
+
+1507502093 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\main.cpp
+	<iostream>
+	"include/screen.h"
+	<fstream>
+	<cmath>
+	<stdlib.h>
+	"reta.h"
+	<sstream>
+	<string>
+	<string.h>
+	"retangulo.h"
+
+1507469820 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\include\screen.h
+	<iostream>
+	<vector>
+
+1507472075 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\src\screen.cpp
+	"../include/screen.h"
+	<iostream>
+
+1507405769 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\src\figurageometrica.cpp
+	"figuraGeometrica.h"
+
+1507405769 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\include\figurageometrica.h
+	"screen.h"
+
+1507403335 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\src\reta.cpp
+	"reta.h"
+	<cmath>
+
+1507406991 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\include\reta.h
+	"figuraGeometrica.h"
+
+1507467209 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\src\retangulo.cpp
+	"retangulo.h"
+
+1507502173 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\include\retangulo.h
+	"figuraGeometrica.h"
+
+1507502139 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\src\circulo.cpp
+	"circulo.h"
+
+1507502194 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\2u\include\circulo.h
+	"figuraGeometrica.h"
+
+1507829229 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\src\circulo.cpp
+	"circulo.h"
+	<iostream>
+	<cmath>
+
+1507826816 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\include\circulo.h
+	"figuraGeometrica.h"
+
+1507706656 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\include\figurageometrica.h
+	"screen.h"
+
+1507706660 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\include\screen.h
+	<iostream>
+	<vector>
+
+1507706656 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\src\figurageometrica.cpp
+	"figuraGeometrica.h"
+
+1507706656 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\src\reta.cpp
+	"reta.h"
+	<cmath>
+
+1507706656 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\include\reta.h
+	"figuraGeometrica.h"
+
+1507706656 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\src\retangulo.cpp
+	"retangulo.h"
+
+1507706660 c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\include\retangulo.h
+	"figuraGeometrica.h"
+
+1507831196 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\src\screen.cpp
+	"screen.h"
+	<iostream>
+
+1507831157 source:c:\users\heitorcarlos\documents\livros pdf\2017.2\programaÇao avanÇada\screen\screen-proj-2u\2u\main.cpp
+	<iostream>
+	"screen.h"
+	<fstream>
+	<stdlib.h>
+	"reta.h"
+	<string>
+	<string.h>
+	"retangulo.h"
+	"circulo.h"
+

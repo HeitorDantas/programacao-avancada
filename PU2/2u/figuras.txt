@@ -1,0 +1,10 @@
+dim 80 80
+brush @
+circle 40 40 20 0
+line 20 40 35 40
+line 45 40 60 40
+circle 40 40 5 0
+circle 40 40 3 0
+rectangle 18 18 44 44
+
+
